@@ -1,0 +1,14 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Hausdorff Distance">
+  <Param description="Sampled Mesh" value="1" tooltip="The mesh whose surface is sampled. For each sample we search the closest point on the Target Mesh." type="RichMesh" name="SampledMesh"/>
+  <Param description="Target Mesh" value="0" tooltip="The mesh that is sampled for the comparison." type="RichMesh" name="TargetMesh"/>
+  <Param description="Save Samples" value="false" tooltip="Save the position and distance of all the used samples on both the two surfaces, creating two new layers with two point clouds representing the used samples." type="RichBool" name="SaveSample"/>
+  <Param description="Sample Vertexes" value="true" tooltip="For the search of maxima it is useful to sample vertices and edges of the mesh with a greater care. It is quite probably the the farthest points falls along edges or on mesh vertexes, and with uniform montecarlo sampling approachesthe probability of taking a sample over a vertex or an edge is theoretically null.&lt;br>On the other hand this kind of sampling could make the overall sampling distribution slightly biased and slightly affects the cumulative results." type="RichBool" name="SampleVert"/>
+  <Param description="Sample Edges" value="true" tooltip="See the above comment." type="RichBool" name="SampleEdge"/>
+  <Param description="Sample FauxEdge" value="false" tooltip="See the above comment." type="RichBool" name="SampleFauxEdge"/>
+  <Param description="Sample Faces" value="true" tooltip="See the above comment." type="RichBool" name="SampleFace"/>
+  <Param description="Number of samples" value="34817" tooltip="The desired number of samples. It can be smaller or larger than the mesh size, and according to the choosed sampling strategy it will try to adapt." type="RichInt" name="SampleNum"/>
+  <Param description="Max Distance" value="2.5124" min="0" max="5.0248" tooltip="Sample points for which we do not find anything whithin this distance are rejected and not considered neither for averaging nor for max." type="RichAbsPerc" name="MaxDist"/>
+ </filter>
+</FilterScript>

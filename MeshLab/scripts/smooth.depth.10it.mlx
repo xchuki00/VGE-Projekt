@@ -1,0 +1,8 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Depth Smooth">
+  <Param description="Smoothing steps" value="10" tooltip="The number of times that the whole algorithm (normal smoothing + vertex fitting) is iterated." type="RichInt" name="stepSmoothNum"/>
+  <Param description="Viewpoint" z="0" tooltip="The position of the view point that is used to get the constraint direction." y="0" type="RichPoint3f" name="viewPoint" x="0"/>
+  <Param description="Affect only selected faces" value="false" tooltip="If checked the filter is performed only on the selected faces" type="RichBool" name="Selected"/>
+ </filter>
+</FilterScript>

@@ -1,0 +1,1 @@
+call cmd /c %* | findstr totaltime >> hausdorff.txt

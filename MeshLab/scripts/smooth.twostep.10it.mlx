@@ -1,0 +1,10 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="TwoStep Smooth">
+  <Param description="Smoothing steps" value="10" tooltip="The number of times that the whole algorithm (normal smoothing + vertex fitting) is iterated." type="RichInt" name="stepSmoothNum"/>
+  <Param description="Feature Angle Threshold (deg)" value="60" tooltip="Specify a threshold angle (0..90) for features that you want to be preserved.&lt;br>Features forming angles LARGER than the specified threshold will be preserved. &lt;br> 0 -> no smoothing &lt;br> 90 -> all faces will be smoothed" type="RichFloat" name="normalThr"/>
+  <Param description="Normal Smoothing steps" value="20" tooltip="Number of iterations of normal smoothing step. The larger the better and (the slower)" type="RichInt" name="stepNormalNum"/>
+  <Param description="Vertex Fitting steps" value="20" tooltip="Number of iterations of the vertex fitting procedure." type="RichInt" name="stepFitNum"/>
+  <Param description="Affect only selected faces" value="false" tooltip="If checked the filter is performed only on the selected faces" type="RichBool" name="Selected"/>
+ </filter>
+</FilterScript>
